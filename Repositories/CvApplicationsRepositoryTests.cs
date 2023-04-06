@@ -48,7 +48,7 @@ namespace CVApplicationsManager.Tests.Repositories
                                 Lastname = $"TestLN {i}",
                                 Email = $"test{i}@test.com",
                                 Mobile = null,
-                                DegreeName = null,
+                                Degree = null,
                                 DegreeId = null,
                                 CvBlob = null,
                                 DateCreated = DateTime.Now
@@ -74,7 +74,7 @@ namespace CVApplicationsManager.Tests.Repositories
                 Lastname = $"TestLN 10",
                 Email = $"test10@test.com",
                 Mobile = null,
-                DegreeName = null,
+                Degree = null,
                 DegreeId = null,
                 CvBlob = null,
                 DateCreated = DateTime.Now

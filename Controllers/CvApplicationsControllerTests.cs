@@ -1,17 +1,14 @@
 ﻿using AutoMapper;
 using CVApplicationsManager.Contracts;
 using CVApplicationsManager.Controllers;
+using CVApplicationsManager.Data;
 using CVApplicationsManager.Models;
 using CVApplicationsManager.Views;
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace CVApplicationsManager.Tests.Controllers
 {
@@ -104,7 +101,5 @@ namespace CVApplicationsManager.Tests.Controllers
             result.Should().BeOfType<Task<IActionResult>>();
             result.Result.Should().BeOfType<RedirectToActionResult>();
         }
-
-
     }
 }

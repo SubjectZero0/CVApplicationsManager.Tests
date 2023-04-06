@@ -51,7 +51,7 @@ namespace CVApplicationsManager.Tests.Repositories
                                 Lastname = $"TestLN {i}",
                                 Email = $"test{i}@test.com",
                                 Mobile = null,
-                                DegreeName = null,
+                                Degree = null,
                                 DegreeId = 1,
                                 CvBlob = null,
                                 DateCreated = DateTime.Now
