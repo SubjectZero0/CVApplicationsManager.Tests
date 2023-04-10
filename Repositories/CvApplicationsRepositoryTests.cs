@@ -197,10 +197,10 @@ namespace CVApplicationsManager.Tests.Repositories
             var dbContext = await GetDbContext();
             var cvApplicationsRepository = new CvApplicationsRepository(dbContext);
 
-            var _testDirectory = Path.Combine(Path.GetTempPath(), "CvApplicationsRepositoryTests");
+            var testDirectory = Path.Combine(Path.GetTempPath(), "CvApplicationsRepositoryTests");
 
-            Directory.CreateDirectory(_testDirectory);
-            Environment.CurrentDirectory = _testDirectory;
+            Directory.CreateDirectory($"{testDirectory}\\wwwroot\\Files");
+            Environment.CurrentDirectory = testDirectory;
 
             var application = await cvApplicationsRepository.GetAsync(3);
 
@@ -208,6 +208,7 @@ namespace CVApplicationsManager.Tests.Repositories
             A.CallTo(() => file.FileName).Returns("test.pdf");
             A.CallTo(() => file.Length).Returns(100);
             A.CallTo(() => file.ContentType).Returns("application/pdf");
+            
 
             // Act
             await cvApplicationsRepository.UpdateOrCreateWithFile(file, application);
